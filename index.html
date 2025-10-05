@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CPF/CNPJ — Validador & Gerador</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>CPF/CNPJ — Validador & Gerador</h1>
+    </header>
+
+    <main class="container grid">
+      <section class="card">
+        <h2>Validar</h2>
+        <label for="docInput">Número</label>
+        <input
+          id="docInput"
+          type="text"
+          placeholder="Digite CPF ou CNPJ"
+          autocomplete="off"
+        />
+        <div class="row">
+          <button id="btnValidate">Validar</button>
+          <button id="btnClear" class="ghost">Limpar</button>
+        </div>
+        <p id="result" class="muted">
+          Digite um CPF (###.###.###-##) ou CNPJ (##.###.###/####-##).
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Gerar</h2>
+        <div class="row">
+          <button id="btnGenCpf">Gerar CPF</button>
+          <button id="btnGenCnpj">Gerar CNPJ</button>
+        </div>
+        <div class="generated">
+          <div>
+            <label>CPF</label>
+            <input id="outCpf" type="text" readonly />
+            <button data-copy="#outCpf" class="ghost">Copiar</button>
+          </div>
+          <div>
+            <label>CNPJ</label>
+            <input id="outCnpj" type="text" readonly />
+            <button data-copy="#outCnpj" class="ghost">Copiar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Como usar</h2>
+        <ul>
+          <li>
+            Valide: digite e clique em <b>Validar</b>. A máscara é aplicada
+            automaticamente.
+          </li>
+          <li>
+            Gere: clique em <b>Gerar CPF</b> ou <b>Gerar CNPJ</b> e copie.
+          </li>
+          <li>Offline: basta abrir o arquivo <code>index.html</code>.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="container">
+      <small
+        >© <span id="year"></span> Gianluca Paz — Ferramentas de
+        validação</small
+      >
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
