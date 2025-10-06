@@ -20,4 +20,4 @@ Abra `index.html` no navegador e utilize os botões para validar ou gerar docume
 
 ## Autor
 
-** Gianluca Paz**
+**Gianluca Paz**
